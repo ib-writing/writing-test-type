@@ -1,0 +1,54 @@
+body, html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    min-width: 100vw;
+    background-color: #f5f5fc;
+    color: black;
+}
+
+.header {
+    padding: 0.5rem 2rem;
+    background-color: #856ef7;
+    color: white;
+    text-align: center;
+}
+
+.navbar {
+    background-color:white;
+    color: black;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.about {
+    background-color: #e6e2fe;
+    display: flex;
+    padding-inline: max(23%, 0rem);
+    justify-content: start;
+    align-items: center;
+    height: 8rem;
+}
+
+.main {
+    margin: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.info {
+    background-color: white;
+    border-radius: 5px;
+    color: black;
+    height: 2rem;
+    width: max(50%, 20rem);
+    padding: 2rem 2rem;
+    text-align: start;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}

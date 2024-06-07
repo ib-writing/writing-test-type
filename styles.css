@@ -6,6 +6,13 @@ body, html {
     min-width: 100vw;
     background-color: #f5f5fc;
     color: black;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    color: inherit;
 }
 
 .header {
@@ -24,13 +31,19 @@ body, html {
     gap: 1rem;
 }
 
+.navbar-right {
+    font-weight: bold;
+    margin-right: auto;
+}
+
 .about {
     background-color: #e6e2fe;
     display: flex;
-    padding-inline: max(23%, 0rem);
+    flex-direction: column;
+    padding: 1rem 2rem 3rem 2rem;
     justify-content: start;
-    align-items: center;
-    height: 8rem;
+    align-items: start;
+    min-height: 8rem;
 }
 
 .main {
@@ -46,9 +59,25 @@ body, html {
     background-color: white;
     border-radius: 5px;
     color: black;
-    height: 2rem;
-    width: max(50%, 20rem);
-    padding: 2rem 2rem;
-    text-align: start;
+    width: max(50%, 22rem);
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    /* border: 2px solid #58009a; */
+    border: 2px solid rgba(94, 94, 94, 0.167);
+    display: flex;
+    padding: 1rem 1.5rem;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.info-right > * {
+    font-size: 2rem;
+}
+
+.info-left > h3 {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+}
+
+.item-border {
+    border: 2px solid #58009a;
 }

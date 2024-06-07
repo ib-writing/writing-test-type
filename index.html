@@ -11,19 +11,46 @@
         Created for <strong> <u> KMB Innovation Day </strong></u> by <strong> <u>Crypt Code Club!</strong></u>
     </header>
     <navbar class="navbar">
-        <div>Home</div>
-        <div>About</div>
+        <div class="navbar-right"><a href="#">IB English</a></div>
+        <div><a href="#">Home</a></div>
+        <div><a href="#">About</a></div>
     </navbar>
     <about class="about">
-        About: This website is for KMB Innovation Day!
+        <h1>IB Writing Portal</h1>
+        <span>Welcome to the IB Writing Portal, your go-to resource for mastering essential writing skills. Whether you’re an IB student or simply want to improve your writing, we’ve got you covered!</span>
     </about>
     <main class="main">
-        <div class="info info-1">Grammar</div>
-        <div class="info info-2">Text Types</div>
-        <div class="info info-3">Past Paper</div>
+        <div onclick="toggleBorder(item_1)" class="info item-1">
+            <div class="info-right">
+                <i class="fa-solid fa-book"></i>
+            </div>
+            <div class="info-left">
+                <h3>Item 1: Basic Grammar</h3>
+                <span>Verb tenses, sentence structure, and common errors.</span>
+            </div>
+        </div>
+        <div onclick="toggleBorder(item_2)" class="info item-2">
+            <div class="info-right">
+                <i class="fa-solid fa-file-lines"></i>
+            </div>
+            <div class="info-left">
+                <h3>Item 2: Learn Text Types</h3>
+                <span>Understand their purpose, structure, and key features.<span>
+            </div>
+        </div>
+        <div onclick="toggleBorder(item_3)" class="info item-3">
+            <div class="info-right">
+                <i class="fa-solid fa-folder-open"></i>
+            </div>
+            <div class="info-left">
+                <h3>Item 3: Practices</h3>
+                <span>Dive into real IB exam prompts related to writing tasks.<span>
+            </div>
+        </div>
     </main>
     
     <footer class="footer"></footer>
 </body>
 <script src="main.js"></script>
+<script src="https://kit.fontawesome.com/db598d28e0.js" crossorigin="anonymous"></script>
 </html>

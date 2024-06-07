@@ -48,18 +48,20 @@ a {
 
 .main {
     margin: 5rem 0;
+    padding-inline: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    padding-inline: 1rem;
 }
 
 .info {
     background-color: white;
     border-radius: 5px;
     color: black;
-    width: max(50%, 22rem);
+    max-width: max(50%, 20rem);
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     /* border: 2px solid #58009a; */
     border: 2px solid rgba(94, 94, 94, 0.167);

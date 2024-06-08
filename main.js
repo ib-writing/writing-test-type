@@ -175,12 +175,18 @@ function createArticleElement(contentDetails) {
 
     mainDiv.addEventListener('click', () => {
         if (mainDiv.style.height == "auto") {
-            mainDiv.style.height = "15rem";
-            mainDiv.style.setProperty('--background', 'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%)')
+            mainDiv.style.height = "4rem";
+            mainDiv.style.setProperty('--background', 'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%)');
+            const container = mainDiv.firstChild.lastChild;
+            container.classList.remove("fa-angle-down");
+            container.classList.add("fa-angle-right");
         } 
         else {
             mainDiv.style.height = "auto";
-            mainDiv.style.setProperty('--background', 'none')
+            mainDiv.style.setProperty('--background', 'none');
+            const container = mainDiv.firstChild.lastChild;
+            container.classList.add("fa-angle-down");
+            container.classList.remove("fa-angle-right");
         }
            
     });
@@ -190,9 +196,16 @@ function createArticleElement(contentDetails) {
     //     { date: 'November 2016', content: '...' }, // Add the content for November 2016
     // ]];
 
+    const container = document.createElement("div");
+    container.setAttribute('class', 'title-icon')
+
     const heading = document.createElement('h3');
     heading.innerText = contentDetails[0];
-    mainDiv.appendChild(heading);
+    container.appendChild(heading);
+
+    container.innerHTML += "<i class='fa-solid fa-angle-right'></i>"
+   
+    mainDiv.appendChild(container)
 
     const innerDiv = document.createElement('div');
     innerDiv.setAttribute('class', 'past-paper');

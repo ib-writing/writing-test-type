@@ -109,7 +109,7 @@ a {
     border-radius: 5px;
     padding-inline: 1.5rem;
     margin-bottom: 2rem;
-    height: 16rem;
+    height: 4rem;
     position: relative;
 }
 
@@ -129,6 +129,14 @@ a {
     pointer-events: none;
 }
 
+.title-icon {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+
 .past-paper {
     display: flex;
     flex-direction: column;
@@ -147,4 +155,20 @@ a {
 
 .past-paper > span:last-child {
     border-bottom: none;
+}
+
+.visible {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+.hidden::before {
+    display: none;
+}
+
+.hidden::after {
+    display: none;
 }

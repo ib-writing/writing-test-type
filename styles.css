@@ -4,7 +4,7 @@ body, html {
     box-sizing: border-box;
     overflow-x: hidden;
     min-width: 100vw;
-    background-color: #f5f5fc;
+    background-color: #ffffff;
     color: black;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -14,6 +14,7 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
 
 .header {
     padding: 0.5rem 2rem;
@@ -47,8 +48,8 @@ a {
 }
 
 .main {
-    margin: 5rem 0;
-    padding-inline: 2rem;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -82,4 +83,68 @@ a {
 
 .item-border {
     border: 2px solid #58009a;
+}
+
+.article {
+    background-color: #f5f5fc;
+    padding: 2rem 2rem;
+    text-align: center;
+}
+
+.article > div > h2 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+} 
+
+.display-none {
+    display: none;
+}
+
+.article-3-content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    background-color: #ffffff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 5px;
+    padding-inline: 1.5rem;
+    margin-bottom: 2rem;
+    height: 16rem;
+    position: relative;
+}
+
+:root {
+    --background:  linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+.article-3-content::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 50%;
+    bottom: 0;
+    background: var(--background);
+    /* background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%); */
+    pointer-events: none;
+}
+
+.past-paper {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: left;
+    gap: 0.5rem;
+    overflow-y: hidden;
+    
+}
+
+.past-paper > span {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgba(94, 94, 94, 0.167);
+}
+
+.past-paper > span:last-child {
+    border-bottom: none;
 }

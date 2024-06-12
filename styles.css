@@ -1,132 +1,136 @@
-body, html {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    min-width: 100vw;
-    background-color: #ffffff;
-    color: black;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+body,
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  min-width: 100vw;
+  background-color: #ffffff;
+  color: black;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 a {
-    outline: none;
-    text-decoration: none;
-    color: inherit;
+  outline: none;
+  text-decoration: none;
+  color: inherit;
 }
 
-
 .header {
-    padding: 0.5rem 2rem;
-    background-color: #856ef7;
-    color: white;
-    text-align: center;
+  padding: 0.5rem 2rem;
+  background-color: #856ef7;
+  color: white;
+  text-align: center;
 }
 
 .navbar {
-    background-color:white;
-    color: black;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
+  background-color: white;
+  color: black;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .navbar-right {
-    font-weight: bold;
-    margin-right: auto;
+  font-weight: bold;
+  margin-right: auto;
 }
 
 .about {
-    background-color: #e6e2fe;
-    display: flex;
-    flex-direction: column;
-    padding: 1rem 2rem 3rem 2rem;
-    justify-content: start;
-    align-items: start;
-    min-height: 8rem;
+  background-color: #e6e2fe;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem 3rem 2rem;
+  justify-content: start;
+  align-items: start;
+  min-height: 8rem;
 }
 
 .main {
-    margin-top: 4rem;
-    margin-bottom: 3rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    padding-inline: 1rem;
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding-inline: 1rem;
 }
 
 .info {
-    background-color: white;
-    border-radius: 5px;
-    color: black;
-    max-width: max(50%, 20rem);
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    /* border: 2px solid #58009a; */
-    border: 2px solid rgba(94, 94, 94, 0.167);
-    display: flex;
-    padding: 1rem 1.5rem;
-    gap: 1.5rem;
-    align-items: center;
+  background-color: white;
+  border-radius: 5px;
+  color: black;
+  max-width: max(50%, 20rem);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  /* border: 2px solid #58009a; */
+  border: 2px solid rgba(94, 94, 94, 0.167);
+  display: flex;
+  padding: 1rem 1.5rem;
+  gap: 1.5rem;
+  align-items: center;
 }
 
 .info-right > * {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 .info-left > h3 {
-    margin-top: 0rem;
-    margin-bottom: 0rem;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
 }
 
 .item-border {
-    border: 2px solid #58009a;
+  border: 2px solid #58009a;
 }
 
 .article {
-    background-color: #f5f5fc;
-    padding: 2rem 2rem;
-    text-align: center;
+  background-color: #f5f5fc;
+  padding: 2rem 2rem;
+  text-align: center;
 }
 
 .article > div > h2 {
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-} 
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
 
 .display-none {
-    display: none;
+  display: none;
 }
 
 .article-3-content {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    background-color: #ffffff;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    border-radius: 5px;
-    padding-inline: 1.5rem;
-    margin-bottom: 2rem;
-    height: 4rem;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  background-color: #ffffff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 5px;
+  padding-inline: 1.5rem;
+  margin-bottom: 2rem;
+  height: 4rem;
+  position: relative;
 }
 
 :root {
-    --background:  linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+  --background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
 }
 
 .article-3-content::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 50%;
-    bottom: 0;
-    background: var(--background);
-    /* background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%); */
-    pointer-events: none;
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 50%;
+  bottom: 0;
+  background: var(--background);
+  /* background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%); */
+  pointer-events: none;
 }
 
 .article-1-content {
@@ -155,10 +159,10 @@ a {
 }
 
 .title-icon {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: baseline;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
 .grammar-rules {
@@ -191,37 +195,90 @@ a {
 }
 
 .past-paper {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    text-align: left;
-    gap: 0.5rem;
-    overflow-y: hidden;
-    
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  text-align: left;
+  gap: 0.5rem;
+  overflow-y: hidden;
 }
 
 .past-paper > span {
-    margin-bottom: 1rem;
-    padding-bottom: 1rem;
-    border-bottom: 2px solid rgba(94, 94, 94, 0.167);
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid rgba(94, 94, 94, 0.167);
 }
 
 .past-paper > span:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .visible {
-    display: block;
+  display: block;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 .hidden::before {
-    display: none;
+  display: none;
 }
 
 .hidden::after {
-    display: none;
+  display: none;
+}
+
+.article-2-container {
+  text-align: start;
+}
+
+.text-types {
+  background-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.text-types > h3 {
+  margin: 0 0 0.5rem 0;
+  text-align: center;
+}
+
+.btn {
+  margin-top: 1rem;
+  padding: 0.6rem 2rem;
+  border-radius: 5px;
+  border: none;
+  font-size: 0.9rem;
+}
+
+.btn-arrow {
+  margin-left: 0.5rem;
+}
+
+.btn-1 {
+  background-color: #fdcffd;
+  color: #f20cf2;
+}
+
+.btn-2 {
+  background-color: #d6cffd;
+  color: #5c3df5;
+}
+
+.btn-3 {
+  background-color: #fdd7ce;
+  color: #f2330d;
+}
+
+.text-types-content {
+  margin-top: 1rem;
+}
+
+.ITK-article {
+  height: auto;
 }

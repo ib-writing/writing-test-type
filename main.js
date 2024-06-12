@@ -512,7 +512,6 @@ EXAM_PRACTICES_DATA.forEach((contentDetails) => {
 });
 
 function toggleItem(name) {
-  console.log(name);
   ele = document.getElementsByClassName(name)[0];
   ele.classList.toggle("display-none");
 }

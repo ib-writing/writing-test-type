@@ -14,8 +14,9 @@ itemList = [
   [item_3, article_3],
 ];
 
-item_2.classList.add("item-border");
-article_2.classList.remove("display-none");
+item_1.classList.add("item-border");
+article_1.classList.remove("display-none");
+article_3.classList.add("display-none");
 
 function toggleBorder(selectedItem) {
   itemList.forEach((item) => {
@@ -31,30 +32,73 @@ function toggleBorder(selectedItem) {
 
 // create custom element for Item 1: Grammar
 
-const divBasicGrammar = document.getElementsByClassName("basic-grammar")
+const divBasicGrammar = document.getElementsByClassName("basic-grammar");
 
 const BASIC_GRAMMAR_DATA = [
-    ["11 Grammar Rules for Error-Free Writing", ["Write in Complete Sentences", "Make Sure Your Subjects and Verbs Agree", "Link Ideas With a Conjunction or Semicolon", "Use Correctly Commas", "Use a Serial Comma When Necessary", "Voice Active Use", "Use the Correct Verb Tense", "Keep Your Verb Tense Consistent", "Only Use Apostrophes for Possessive Nouns and Contractions", "Keep Your Homophones Straight", "Use End Punctuations Correctly"]],
-    ["Parts of Speech", [["", "Definition/Function", "In a Sentence"]], 
-                        [["NOUN", "Person, place or thing", "<b>Sven</b> owns an expensive house"], 
-                        ["VERB", "Physical action or state", "They <b>play</b> golf on Sundays"], 
-                        ["ADJECTIVE", "Describes nouns and pronouns", "That was a <b>loud</b> sound system"], 
-                        ["ADVERB", "Modifies adjectives, verbs, and adverbs", "The food arrived <b>fast</b>"], 
-                        ["PRONOUN", "Replaces nouns", "<b>She</b> is very punctual"], 
-                        ["PREPOSITION", "Links nouns to other words", "The shoes are <b>beside</b> the door"], 
-                        ["CONJUNCTION", "Joins words, phrases or clauses", "He requested today off, <b>but</b> was denied"], 
-                        ["INTERJECTION", "Shows strong feelings", "<b>Wow!</b> That's a suprise gift"]],
-                        ],
-    ["Basic Grammar", [["SUBJECT", "OBJECT", "POSSESSIVE ADJECTIVE", "POSSESSIVE PRONOUNS"]], 
-                        [["I", "me", "my", "mine" ],
-                        ["You", "you", "your", "yours" ],
-                        ["We", "us", "our", "ours" ],
-                        ["They", "them", "their", "theirs" ],
-                        ["He", "him", "his", "his" ],
-                        ["She", "her", "her", "hers" ],
-                        ["It", "it", "it", "???" ]],
-                    ]
-]
+  [
+    "11 Grammar Rules for Error-Free Writing",
+    [
+      "Write in Complete Sentences",
+      "Make Sure Your Subjects and Verbs Agree",
+      "Link Ideas With a Conjunction or Semicolon",
+      "Use Correctly Commas",
+      "Use a Serial Comma When Necessary",
+      "Voice Active Use",
+      "Use the Correct Verb Tense",
+      "Keep Your Verb Tense Consistent",
+      "Only Use Apostrophes for Possessive Nouns and Contractions",
+      "Keep Your Homophones Straight",
+      "Use End Punctuations Correctly",
+    ],
+  ],
+  [
+    "Parts of Speech",
+    [["", "Definition/Function", "In a Sentence"]],
+    [
+      ["NOUN", "Person, place or thing", "<b>Sven</b> owns an expensive house"],
+      ["VERB", "Physical action or state", "They <b>play</b> golf on Sundays"],
+      [
+        "ADJECTIVE",
+        "Describes nouns and pronouns",
+        "That was a <b>loud</b> sound system",
+      ],
+      [
+        "ADVERB",
+        "Modifies adjectives, verbs, and adverbs",
+        "The food arrived <b>fast</b>",
+      ],
+      ["PRONOUN", "Replaces nouns", "<b>She</b> is very punctual"],
+      [
+        "PREPOSITION",
+        "Links nouns to other words",
+        "The shoes are <b>beside</b> the door",
+      ],
+      [
+        "CONJUNCTION",
+        "Joins words, phrases or clauses",
+        "He requested today off, <b>but</b> was denied",
+      ],
+      [
+        "INTERJECTION",
+        "Shows strong feelings",
+        "<b>Wow!</b> That's a suprise gift",
+      ],
+    ],
+  ],
+  [
+    "Basic Grammar",
+    [["SUBJECT", "OBJECT", "POSSESSIVE ADJECTIVE", "POSSESSIVE PRONOUNS"]],
+    [
+      ["I", "me", "my", "mine"],
+      ["You", "you", "your", "yours"],
+      ["We", "us", "our", "ours"],
+      ["They", "them", "their", "theirs"],
+      ["He", "him", "his", "his"],
+      ["She", "her", "her", "hers"],
+      ["It", "it", "it", "???"],
+    ],
+  ],
+];
 
 // create custom element for Item 3: Practices
 
@@ -476,134 +520,132 @@ const EXAM_PRACTICES_DATA = [
 ];
 
 function createArticleElement(contentDetails, articleNum) {
-    const mainDiv = document.createElement('div');
-    mainDiv.setAttribute('class', articleNum);
-    // mainDiv.onclick = () => openPractice(this)
+  const mainDiv = document.createElement("div");
+  mainDiv.setAttribute("class", articleNum);
+  // mainDiv.onclick = () => openPractice(this)
 
-    mainDiv.addEventListener('click', () => {
-        if (mainDiv.style.height == "auto") {
-            mainDiv.style.height = "4rem";
-            mainDiv.style.setProperty('--background', 'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%)');
-            const container = mainDiv.firstChild.lastChild;
-            container.classList.remove("fa-angle-down");
-            container.classList.add("fa-angle-right");
-        } 
-        else {
-            mainDiv.style.height = "auto";
-            mainDiv.style.setProperty('--background', 'none');
-            const container = mainDiv.firstChild.lastChild;
-            container.classList.add("fa-angle-down");
-            container.classList.remove("fa-angle-right");
-        }
-    
-    });
+  mainDiv.addEventListener("click", () => {
+    if (mainDiv.style.height == "auto") {
+      mainDiv.style.height = "4rem";
+      mainDiv.style.setProperty(
+        "--background",
+        "linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%)"
+      );
+      const container = mainDiv.firstChild.lastChild;
+      container.classList.remove("fa-angle-down");
+      container.classList.add("fa-angle-right");
+    } else {
+      mainDiv.style.height = "auto";
+      mainDiv.style.setProperty("--background", "none");
+      const container = mainDiv.firstChild.lastChild;
+      container.classList.add("fa-angle-down");
+      container.classList.remove("fa-angle-right");
+    }
+  });
 
-    const container = document.createElement("div");
-    container.setAttribute('class', 'title-icon')
+  const container = document.createElement("div");
+  container.setAttribute("class", "title-icon");
 
-    const heading = document.createElement('h3');
-    heading.innerText = contentDetails[0];
-    container.appendChild(heading);
+  const heading = document.createElement("h3");
+  heading.innerText = contentDetails[0];
+  container.appendChild(heading);
 
-    container.innerHTML += "<i class='fa-solid fa-angle-right'></i>"
+  container.innerHTML += "<i class='fa-solid fa-angle-right'></i>";
 
-    mainDiv.appendChild(container)
+  mainDiv.appendChild(container);
 
-    if (articleNum == "article-1-content"){
-        const innerDiv = document.createElement('div');
+  if (articleNum == "article-1-content") {
+    const innerDiv = document.createElement("div");
 
-        if (contentDetails[0] == "11 Grammar Rules for Error-Free Writing"){
-            innerDiv.setAttribute('class', 'grammar-rules');
-            
-            const ol = document.createElement('ol');
+    if (contentDetails[0] == "11 Grammar Rules for Error-Free Writing") {
+      innerDiv.setAttribute("class", "grammar-rules");
 
-            contentDetails[1].forEach(detail => {   
+      const ol = document.createElement("ol");
 
-                const li = document.createElement('li');
-                li.innerText = detail;
-                
-                ol.appendChild(li);
+      contentDetails[1].forEach((detail) => {
+        const li = document.createElement("li");
+        li.innerText = detail;
 
-            innerDiv.appendChild(ol);
-            
-            });
-        };
+        ol.appendChild(li);
 
-        if (contentDetails[0] == "Parts of Speech" || contentDetails[0] == "Basic Grammar") {
-            innerDiv.setAttribute('class', 'tables');
-        
-            const table = document.createElement('table');
-        
-            // Create table headers
-            contentDetails[1].forEach(details => {
-                const tr = document.createElement("tr");
-        
-                details.forEach(detail => {
-                    const th = document.createElement("th");  
-                    th.innerText = detail;
-                    tr.appendChild(th);  
-                });
-        
-                table.appendChild(tr);
-            });
-        
-            // Create table rows
-            contentDetails[2].forEach(details => {
-                const tr = document.createElement("tr");
-        
-                details.forEach(detail => {
-                    const td = document.createElement("td");
-                    td.innerText = detail;
-                    tr.appendChild(td);
-                });
-        
-                table.appendChild(tr);
-            });
-        
-            innerDiv.appendChild(table);
-        };
+        innerDiv.appendChild(ol);
+      });
+    }
 
-        
+    if (
+      contentDetails[0] == "Parts of Speech" ||
+      contentDetails[0] == "Basic Grammar"
+    ) {
+      innerDiv.setAttribute("class", "tables");
 
-        mainDiv.appendChild(innerDiv);
-        divBasicGrammar[0].appendChild(mainDiv);
-    };
+      const table = document.createElement("table");
 
-    if (articleNum == "article-3-content"){
+      // Create table headers
+      contentDetails[1].forEach((details) => {
+        const tr = document.createElement("tr");
 
+        details.forEach((detail) => {
+          const th = document.createElement("th");
+          th.innerText = detail;
+          tr.appendChild(th);
+        });
+
+        table.appendChild(tr);
+      });
+
+      // Create table rows
+      contentDetails[2].forEach((details) => {
+        const tr = document.createElement("tr");
+
+        details.forEach((detail) => {
+          const td = document.createElement("td");
+          td.innerText = detail;
+          tr.appendChild(td);
+        });
+
+        table.appendChild(tr);
+      });
+
+      innerDiv.appendChild(table);
+    }
+
+    mainDiv.appendChild(innerDiv);
+    divBasicGrammar[0].appendChild(mainDiv);
+  }
+
+  if (articleNum == "article-3-content") {
     // const contentDetails = [ "Blog",
     //     { date: 'May 2019', content: '...' }, // Add the content for May 2019
     //     { date: 'November 2016', content: '...' }, // Add the content for November 2016
     // ]];
 
-        const innerDiv = document.createElement('div');
-        innerDiv.setAttribute('class', 'past-paper');
+    const innerDiv = document.createElement("div");
+    innerDiv.setAttribute("class", "past-paper");
 
-        contentDetails[1].forEach(detail => {
-            const strong = document.createElement('strong');
-            strong.innerText = detail.date;
+    contentDetails[1].forEach((detail) => {
+      const strong = document.createElement("strong");
+      strong.innerText = detail.date;
 
-            const span = document.createElement('span');
-            span.innerText = detail.content;
+      const span = document.createElement("span");
+      span.innerText = detail.content;
 
-            innerDiv.appendChild(strong);
-            innerDiv.appendChild(span);
-        });
+      innerDiv.appendChild(strong);
+      innerDiv.appendChild(span);
+    });
 
-        mainDiv.appendChild(innerDiv);
-        divExamPractices[0].appendChild(mainDiv);
-    }
-
+    mainDiv.appendChild(innerDiv);
+    divExamPractices[0].appendChild(mainDiv);
+  }
 }
 
-EXAM_PRACTICES_DATA.forEach(contentDetails => {
-    createArticleElement(contentDetails, 'article-3-content')
-})
-BASIC_GRAMMAR_DATA.forEach(contentDetails => {
-    createArticleElement(contentDetails, 'article-1-content')
-})
+EXAM_PRACTICES_DATA.forEach((contentDetails) => {
+  createArticleElement(contentDetails, "article-3-content");
+});
+BASIC_GRAMMAR_DATA.forEach((contentDetails) => {
+  createArticleElement(contentDetails, "article-1-content");
+});
 
 function toggleItem(name) {
   ele = document.getElementsByClassName(name)[0];
   ele.classList.toggle("display-none");
-};
+}

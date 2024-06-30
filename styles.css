@@ -145,6 +145,8 @@ a {
   height: 4rem;
   position: relative;
   text-align: start;
+  overflow-x: auto;
+  overflow-y: hidden
 }
 
 .article-1-content:nth-child(2) {
@@ -192,8 +194,34 @@ a {
   flex-direction: column;
   align-items: start;
   text-align: left;
-  gap: 0.5rem;
   overflow-y: hidden;
+  border-collapse: collapse;
+  margin:25px 0;
+  font-size: 0.9em;
+  min-width: 200px;
+  border-radius: 0.8rem;
+  overflow: hidden;
+}
+
+.tables thead tr {
+  background-color: #856ef7;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.tables th,
+.tables td {
+  padding: 12px 15px;
+  min-width: 200px;
+}
+
+.tables tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.tables tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
 }
 
 .past-paper {

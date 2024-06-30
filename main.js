@@ -582,6 +582,7 @@ function createArticleElement(contentDetails, articleNum) {
 
       // Create table headers
       contentDetails[1].forEach((details) => {
+        const thead = document.createElement("thead");
         const tr = document.createElement("tr");
 
         details.forEach((detail) => {
@@ -590,11 +591,14 @@ function createArticleElement(contentDetails, articleNum) {
           tr.appendChild(th);
         });
 
-        table.appendChild(tr);
+        thead.appendChild(tr);
+        table.appendChild(thead);
       });
 
       // Create table rows
+      const tbody = document.createElement("tbody");
       contentDetails[2].forEach((details) => {
+        
         const tr = document.createElement("tr");
 
         details.forEach((detail) => {
@@ -603,7 +607,8 @@ function createArticleElement(contentDetails, articleNum) {
           tr.appendChild(td);
         });
 
-        table.appendChild(tr);
+        tbody.appendChild(tr);
+        table.appendChild(tbody);
       });
 
       innerDiv.appendChild(table);
